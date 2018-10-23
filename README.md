@@ -19,7 +19,8 @@ Each version of the site has been given two of the six vulnerabilities. (In othe
 Vulnerability #1: Session Hijacking
   - Using exposed PHP session tools and changing the session id allows for hijacking other users' sessions. In this instance, this was accomplished by logging into the pperson account, then viewing the PHPSessionID; next, I opened a private window and went to the public site, then to the PHPSession tool to change the private window's session ID to the admin's ID. This immediately logs the private session into the admin account. 
 
-Vulnerability #2: 
+Vulnerability #2: SQL Injection
+  - Using the basic SQLi proof (' OR SLEEP(5)=0--') shows that the blue site is vurnerable to SQLi. Constructing the URL as follows will replicate it: ```https://104.198.208.81/blue/public/salesperson.php?id=%27%20OR%20SLEEP(5)=0--%27```
 
 
 ## Green
@@ -36,7 +37,8 @@ Vulnerability #2: Cross-Site Scripting
 Vulnerability #1: IDOR 
   - Data of "fired" employee and recently hired employee who are unlisted can be indirectly accessed by manipulating the id paramater in the Get request. When attempted this manipulation on the green and blue sites, they simply redirect to the territories page. 
 
-Vulnerability #2: 
+Vulnerability #2: CSRF
+  - Submitting a malicious webpage into the contact section is CSRF, and the authenticated user activates when they view the page.
 
 
 ## Notes
