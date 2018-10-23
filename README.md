@@ -44,7 +44,7 @@ Vulnerability #2:
 
 The green website had no filter at all on its contact field, so I made a button that edited the cookie name when clicked. Obviously, this was just for the fun of it (and because it was funny to see the buttons rendered on the admin side), and this "attack" could be much stealthier if the attacker used onload or the like.
 
-'''
+```html
 <div id="dontClick" style="background-color: lime; margin: auto;">Click Me!</div>
 <script>
 dontClick.addEventListener('click', () => {
@@ -52,6 +52,6 @@ dontClick.addEventListener('click', () => {
 	dontClick.innerHTML = document.cookie;
 });
 </script>
-'''
+```
 
 
