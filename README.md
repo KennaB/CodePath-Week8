@@ -54,7 +54,7 @@ Vulnerability #2: CSRF
   - Submitting a malicious webpage into the contact section is CSRF, and the authenticated user activates when they view the page.
 
   - GIF Walkthrough: 
-    ![](.gif)
+    ![](csrf.gif)
 
 ## Notes
 
