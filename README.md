@@ -19,7 +19,7 @@ Each version of the site has been given two of the six vulnerabilities. (In othe
 Vulnerability #1: Session Hijacking
   - Using exposed PHP session tools and changing the session id allows for hijacking other users' sessions. In this instance, this was accomplished by logging into the pperson account, then viewing the PHPSessionID; next, I opened a private window and went to the public site, then to the PHPSession tool to change the private window's session ID to the admin's ID. This immediately logs the private session into the admin account. 
   - GIF Walkthrough: 
-    ![](.gif)
+    ![](session.gif)
 
 
 Vulnerability #2: SQL Injection
@@ -33,7 +33,7 @@ Vulnerability #1: Username Enumeration
   - Validity of attempted login username leaks due to differences in formatting, such as bold typeface for valid usernames.
 
   - GIF Walkthrough: 
-    ![](.gif)
+    ![](uenum.gif)
 
 Vulnerability #2: Cross-Site Scripting
   - XSS was impossible to miss; the contact form did not sanitize input, meaning code could be injected and executed when the admin or authenticated user accessed the feedback page.
@@ -48,7 +48,7 @@ Vulnerability #1: IDOR
   - Data of "fired" employee and recently hired employee who are unlisted can be indirectly accessed by manipulating the id paramater in the Get request. When attempted this manipulation on the green and blue sites, they simply redirect to the territories page. 
   
   - GIF Walkthrough: 
-    ![](.gif)
+    ![](IDOR.gif)
 
 Vulnerability #2: CSRF
   - Submitting a malicious webpage into the contact section is CSRF, and the authenticated user activates when they view the page.
