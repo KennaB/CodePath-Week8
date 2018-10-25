@@ -18,10 +18,13 @@ Each version of the site has been given two of the six vulnerabilities. (In othe
 
 Vulnerability #1: Session Hijacking
   - Using exposed PHP session tools and changing the session id allows for hijacking other users' sessions. In this instance, this was accomplished by logging into the pperson account, then viewing the PHPSessionID; next, I opened a private window and went to the public site, then to the PHPSession tool to change the private window's session ID to the admin's ID. This immediately logs the private session into the admin account. 
+  - [ ] GIF Walkthrough: 
+    ![](XSS.gif)
 
 Vulnerability #2: SQL Injection
   - Using the basic SQLi proof (' OR SLEEP(5)=0--') shows that the blue site is vurnerable to SQLi. Constructing the URL as follows will replicate it: ```https://104.198.208.81/blue/public/salesperson.php?id=%27%20OR%20SLEEP(5)=0--%27```
-
+  - [ ] GIF Walkthrough: 
+    ![](SQLi.gif)
 
 ## Green
 
